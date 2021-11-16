@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    background-image: url(./assets/matryoshka-516281_1280.jpeg);
+    background-image: url(./assets/florian-van-duyn-383221-unsplash_resized.jpeg);
     background-position: center;
     background-size: cover;
     color: #fff;
@@ -32,8 +32,6 @@ body {
 }
 
 .box {
-    grid-area: m;
-    gap: 10px;
     width: 500px;
     background: rgb(66, 51, 51);
     opacity: .9;

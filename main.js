@@ -2,6 +2,8 @@
 const storyElement = document.getElementById("story");
 const choiceButtonsElement = document.getElementById("choice-btns");
 
+// Funkar inte???
+/*
 function audioToggle() {
   const audio = document.querySelector("audio");
   const paused = audio.paused;
@@ -14,6 +16,7 @@ function audioToggle() {
     playStart.style.color = "grey"
   }
 }
+*/
 
 /* håller koll på vilka objekt spelaren har */
 let state = {};
@@ -22,7 +25,7 @@ function startGame() {
   state = {};
   showTextNode(1);
 }
-/* ser till att vi hamnar på rätt fråga baserat på vilket val man ör */
+/* ser till att vi hamnar på rätt fråga baserat på vilket val man gör */
 /* while/for each loop för att ta bort alternativen och ha olika alternativ beroende på vilket state man är i */ 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
@@ -73,12 +76,11 @@ const textNodes = [
     choice: [
       {
         text: "Plocka upp flugsvampen",
-        setState: { flugsvamp: true },
+        setState: { flugSvamp: true },
         nextText: 3,
       },
       {
         text: "Usch, flugsvamp är giftigt. Gå vidare",
-        setState: { flugsvamp: false },
         nextText: 3,
       }
     ]
@@ -128,7 +130,7 @@ const textNodes = [
   text: "Du har ingen täckning på mobilen och kan inte låsa upp sparkcykeln, du börjar gå hem när du plötsligt blir biten i nacken av en zombie",
   choice: [
     {
-      text: "Restart",
+      text: "Bättre lycka nästa gång",
       nextText: -1,
     },
   ],
@@ -173,7 +175,7 @@ const textNodes = [
   text: "Ditt försök att fly är omöjligt, du blir ett enkelt byte för zombien.",
   choice: [
     {
-      text: "Restart",
+      text: "Bättre lycka nästa gång",
       nextText: -1,
     },
   ],
@@ -183,7 +185,7 @@ const textNodes = [
   text: "Din pajas, trodde du verkligen att en flugsvamp skulle döda zombien?",
   choice: [
     {
-      text: "Restart",
+      text: "Bättre lycka nästa gång",
       nextText: -1,
     },
   ],

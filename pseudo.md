@@ -1,4 +1,5 @@
-Start game
+Q1  Ready to play?
+    Start game
 Q2  Choose to pick up or leave the "flugsvamp" {
     if (flygsvamp)
     set state: flugsvamp = true --- go to Q3
