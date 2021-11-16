@@ -6,7 +6,9 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-
+html {
+    height: 100%;
+}
 
 /* Reusable styles */
 .flex {
@@ -20,8 +22,6 @@
 .align-center {
     align-items: center;
 }
-
-
 
 body {
     background-image: url(./assets/matryoshka-516281_1280.jpeg);
@@ -63,4 +63,21 @@ body {
     margin: 5px;
     box-shadow: 0 10px 27px grey;
 }
+/* .slider, .slider > img {
+    height: 100%;
+    width: 100%;
+}
 
+.slider > img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+
+.slider > img.show {
+    opacity: 1;
+} */

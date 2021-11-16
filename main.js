@@ -2,6 +2,19 @@
 const storyElement = document.getElementById("story");
 const choiceButtonsElement = document.getElementById("choice-btns");
 
+function audioToggle() {
+  const audio = document.querySelector("audio");
+  const paused = audio.paused;
+  const playStart = document.querySelector("material-icons-outlined")
+  if(paused) {
+    audio.play()
+    playStart.style.color = "red"
+  } else {
+    audio.pause()
+    playStart.style.color = "grey"
+  }
+}
+
 /* håller koll på vilka objekt spelaren har */
 let state = {};
 
@@ -9,7 +22,7 @@ function startGame() {
   state = {};
   showTextNode(1);
 }
-/* ser till att vi hamnar på rätt fråga baserat på vilket val man gör */
+/* ser till att vi hamnar på rätt fråga baserat på vilket val man ör */
 /* while/for each loop för att ta bort alternativen och ha olika alternativ beroende på vilket state man är i */ 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
