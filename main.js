@@ -46,7 +46,7 @@ showTextNode(nextTextNodeId)
 const textNodes = [
   {
     id: 1,
-    story: "Detta är en textbaserad interaktiv upplevelse. För att lösa mysteriet i svampskogen måste du tänka utanför boxen och använda din fantasi! Är du redo?",
+    text: "Detta är en textbaserad interaktiv upplevelse. För att lösa mysteriet i svampskogen måste du tänka utanför boxen och använda din fantasi! Är du redo?",
     choice: [
       {
         text: "Challenge accepted!",
@@ -56,7 +56,7 @@ const textNodes = [
   },
   {
     id: 2,
-    story: "Det är en mulen november eftermiddag och du är i svampskogen och du har plockat en hel korg med kantareller. Plötsligt får du syn på en röd flugsvamp, vad gör du? ",
+    text: "Det är en mulen november eftermiddag och du är i svampskogen och du har plockat en hel korg med kantareller. Plötsligt får du syn på en röd flugsvamp, vad gör du? ",
     choice: [
       {
         text: "Plocka upp flugsvampen",
@@ -72,7 +72,7 @@ const textNodes = [
   },
   {
     id: 3,
-    story: "På vägen ut från skogen så får du syn på den största kantarellen du någonsin sett! Du går närmare och ser att det ligger en sprillans ny Macbok Air med M1 chip brevid, För att plocka upp ett objekt måste du byta bort din flugsvamp.",
+    text: "På vägen ut från skogen så får du syn på den största kantarellen du någonsin sett! Du går närmare och ser att det ligger en sprillans ny Macbok Air med M1 chip brevid, För att plocka upp ett objekt måste du byta bort din flugsvamp.",
     choice: [
       {
         text: "Kasta flugsvampen och ta Macbook Air",
@@ -201,7 +201,3 @@ const textNodes = [
 startGame();
   
   
-
-
-
-]
