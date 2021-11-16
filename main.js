@@ -1,5 +1,5 @@
 /* Globala variabler */
-const storyElement = document.getElementById("text");
+const storyElement = document.getElementById("story");
 const choiceButtonsElement = document.getElementById("choice-buttons");
 
 /* håller koll på vilka objekt spelaren har */
