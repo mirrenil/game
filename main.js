@@ -76,14 +76,14 @@ const textNodes = [
     choice: [
       {
         text: "Kasta flugsvampen och ta Macbook Air",
-        requiredState: (currentState) => currentState.flugsvamp,
-        setState: { flugsvamp: false, macbook: true },
+        requiredState: (currentState) => currentState.flugSvamp,
+        setState: { flugSvamp: false, macbookAir: true },
         nextText: 4,
       },
       {
         text: "Kasta flugsvampen och ta kantarellen",
-        requiredState: (currentState) => currentState.flugsvamp,
-        setState: { flugsvamp: false, kantarell: true },
+        requiredState: (currentState) => currentState.flugSvamp,
+        setState: { flugSvamp: false, kantarell: true },
         nextText: 4,
       },
       {
@@ -110,7 +110,97 @@ const textNodes = [
     },
   ],
 },
+{
+  id: 5,
+  text: "Du har ingen täckning på mobilen och kan inte låsa upp sparkcykeln, du börjar gå hem när du plötsligt blir biten i nacken av en zombie",
+  choice: [
+    {
+      text: "Restart",
+      nextText: -1,
+    },
+  ],
+},
+{
+  id: 6,
+  text: 'Du börjar gå hem och du märker att du inte är ensam, det är någon som förföljer dig! Det är din granne som har blivit en zombie "Ahhhhhhh ta inte mig, ta mina kantareller istället!!',
+  choice: [
+    {
+      text: "Kasta kantareller på zombien",
+      nextText: 11,
+    },
+  ],
+},
+{
+  id: 7,
+  text: "På vägen hem så stöter du på en zombie",
+  choice: [
+    {
+      text: "Försök att fly",
+      nextText: 8,
+    },
+    {
+      text: "Kasta flugsvampen på zombien",
+      requiredState: (currentState) => currentState.flugSvamp,
+      nextText: 9,
+    },
+    {
+      text: "Muta zombien med din nya Macbook Air",
+      requiredState: (currentState) => currentState.macbookAir,
+      nextText: 10,
+    },
+    {
+      text: "Kasta kantareller på zombien",
+      requiredState: (currentState) => currentState.kantarell,
+      nextText: 11,
+    },
+  ],
+},
+{
+  id: 8,
+  text: "Ditt försök att fly är omöjligt, du blir ett enkelt byte för zombien.",
+  choice: [
+    {
+      text: "Restart",
+      nextText: -1,
+    },
+  ],
+},
+{
+  id: 9,
+  text: "Din pajas, trodde du verkligen att en flugsvamp skulle döda zombien?",
+  choice: [
+    {
+      text: "Restart",
+      nextText: -1,
+    },
+  ],
+},
+{
+  id: 10,
+  text: "Zombien skrattar åt dig, tar din Macbook Air och skonar dig",
+  choice: [
+    {
+      text: "Du blev av med min nya Macbook Air men överlevde, grattis!!",
+      requiredState: (currentState) => currentState.macbookAir,
+      nextText: -1,
+    },
+  ],
+},
+{
+  id: 11,
+  text: "Du kastade kantareller på zombien och zombien fick en allergiskreaktion. Plötsligt börjar zombien brinna och du tar din svampkorg och går hem och levde lyckligt i alla sina dagar.",
+  choice: [
+    {
+      text: "Wohooo grattis!!! Vill du spela igen?",
+      nextText: -1,
+    },
+  ],
+},
+];
 
+startGame();
+  
+  
 
 
 

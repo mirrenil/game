@@ -1,12 +1,10 @@
-*,
-*::after,
-*::before {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 
@@ -50,7 +48,7 @@ body {
     margin: 2rem;
 }
 
-#text {
+#story {
     margin-bottom: 30px;
     text-align: center;
 }
