@@ -1,6 +1,6 @@
 // Globala variabler
 const storyElement = document.getElementById("story");
-const choiceButtonsElement = document.getElementById("choice-btns");
+const choiceButtonsElement = document.getElementById("choice");
 
 /*Spela/pausa musiken på sidan*/
 function audioToggle() {
@@ -9,10 +9,10 @@ function audioToggle() {
   const playStart = document.querySelector("material-icons");
   if (paused) {
     audio.play();
-    playStart.style.color = "white";
+    
   } else {
     audio.pause();
-    playStart.style.color = "grey";
+    
   }
 }
 
