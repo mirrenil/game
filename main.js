@@ -1,24 +1,24 @@
-/* Globala variabler */
+// Globala variabler 
 const storyElement = document.getElementById("story");
 const choiceButtonsElement = document.getElementById("choice-btns");
 
-// Funkar inte???
-/*
+
+/*Spela/pausa musiken på sidan*/
 function audioToggle() {
   const audio = document.querySelector("audio");
   const paused = audio.paused;
-  const playStart = document.querySelector("material-icons-outlined")
+  const playStart = document.querySelector("material-icons")
   if(paused) {
     audio.play()
-    playStart.style.color = "red"
+    playStart.style.color = "white"
   } else {
     audio.pause()
     playStart.style.color = "grey"
   }
 }
-*/
 
-/* håller koll på vilka objekt spelaren har */
+
+/* håller koll på vilket state spelaren har */
 let state = {};
 
 function startGame() {
@@ -26,14 +26,14 @@ function startGame() {
   showTextNode(1);
 }
 /* ser till att vi hamnar på rätt fråga baserat på vilket val man gör */
-/* while/for each loop för att ta bort alternativen och ha olika alternativ beroende på vilket state man är i */ 
+
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
   storyElement.innerText = textNode.text;
   while (choiceButtonsElement.firstChild) {
     choiceButtonsElement.removeChild(choiceButtonsElement.firstChild);
   }
-
+/* while/for each loop för att ta bort alternativen och ha olika alternativ beroende på vilket state man är i */ 
   textNode.choice.forEach((choice) => {
     if (showChoice(choice)) {
       const button = document.createElement("button");
@@ -48,17 +48,20 @@ function showTextNode(textNodeIndex) {
 function showChoice(choice) {
   return choice.requiredState == null || choice.requiredState(state)
 }
-
+/* Om du svarar fel så kommer du tillbaka till index 0 och får starta om*/
 function selectChoice(choice) {
   const nextTextNodeId = choice.nextText
   if (nextTextNodeId <= 0) {
     return startGame()
   }
-
+/*Beroende på vilket state du är i så får du olika val*/
 state = Object.assign(state, choice.setState)
 showTextNode(nextTextNodeId)
 }
 
+
+
+/*Frågor och svarsalternativ*/
 const textNodes = [
   {
     id: 1,
