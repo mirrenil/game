@@ -11,3 +11,6 @@ Lycka till!
 
 
 Project made by: Miranda Nilhag
+
+
+Demo: https://mirrenil.github.io/mysteriet-i-svampskogen-text-based-interactive-game/
