@@ -13,4 +13,4 @@ Lycka till!
 Project made by: Miranda Nilhag
 
 
-Demo: https://mirrenil.github.io/Lab-1/
+
